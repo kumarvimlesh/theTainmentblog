@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="thetainmentblog | Learn about latest technology news and many more relatesd stuff.Also Post Your Thoughts Stories in front of the whole world.">
+    <meta name="keywords" content="latest technology,upcoming device,technology news,theTainmentblog">
+    <meta name="author" content="Vimlesh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=np">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>theTainmentblog | Home </title> 
+
+      <link rel="icon" type="image/logo_thetainment.jpg" style="border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;-o-border-radius: 50%;" href="image/logo_thetainment.jpg"/>    
+
+      <!--link rel="stylesheet" href="thetainmentblogstyle.css"type="text/css"-->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+      <!--Adsence-->
+ 
+      <!--adsence-->
+
+      
+<!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127455821-1"></script>
+     <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'UA-127455821-1');
+     </script>
+     <style>
+               body
+               {
+                padding: 0px 0px 0px 0px;
+                width: 100%;
+                background-color: #333;
+                right: 0;
+                left: 0;
+               }
+               nav
+               {
+               	width: 100%;
+               	height: 20px;
+               	font-size: 12pt;
+               	background-color: #333;
+               	z-index: 200;
+               	box-shadow: 4px 4px 4px 4px rgba(0.4,0.4,0.4,0.4)
+               }
+          .footer
+                {
+                  background-color: #d1c4e9;
+                  margin: 0px auto;
+                  padding: 20px 0px 0px 0px;
+                  text-align: center;
+                  font-size: 12pt;
+                }
+                a:hover
+                {
+                  opacity: 0.7;
+                  text-decoration: none;
+                }
+     </style>
+</head>
+<body>
+
+
+<!---begin login modal--->
+  <div id="loginModal" class="modal fade" style="padding: 0px 0px 0px 0px;margin-top: 0px;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" style="text-align: center; font-size: 20pt; text-align: center;">Subscribe To Our Newsletter</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="offset-2">
+                            <div class="form-group row col-sm-8">
+                               <label for="name" class="sr-only" style="font-size: 10pt;">Full Name</label>
+                               <input type="text" style="font-size: 10pt;" id="name" name="name" placeholder="Full Name" class="form-control" autofocus>
+                            </div>
+                            <div class="form-group row col-sm-8">
+                                <label style="font-size: 10pt;" for="phone" class="sr-only">Mobile</label>
+                                <input style="font-size: 10pt;" type="tel" id="phone" name="phone" placeholder="Mobile Number (10 Digit)" class="form-control" maxlength="10">
+                            </div>
+                            <div class="form-group row col-sm-8">
+                                <label style="font-size: 10pt;" class="sr-only" for="email">Email address</label>
+                                <input style="font-size: 10pt;" type="email" class="form-control form-control-sm mr-1" id="email" name="email" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group row col-sm-8">
+                            <button type="button" style="font-size: 10pt;" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button style="font-size: 10pt;" name="submit" class="btn btn-primary btn-sm ml-1" onclick="writeUserData()">Subscribe</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    
+  </div>
+ <!---end login modal--->
+
+ <!--header begin-->
+	<div class="row" style="padding: 2px 0 2px 0; left: 0;right: 0;width: 100%">
+		<div class="col-12 col-sm-4">
+			
+		</div>
+		<div class="col-sm-2" style="background-color: #fff; border-top-left-radius: 20px;border-bottom-left-radius: 20px;">
+			<div>
+		      <img style="display: block;margin:auto;" class="img-fluid " src="image/logo_thetainment.jpg" width="70%" alt="logo theTainmentblog">
+            </div>
+		</div>
+		<div class="col-sm" style="background-color: #fff;text-align: center;">
+			<h1 style="color: #97e;">You Are Most WELCOME !</h1>
+			<h5>in</h5>
+			<h3 style="color: #97e;">theTainmentblog</h3>
+		</div>
+	</div>
+ <!--header end-->
+<!--nav begin-->
+   <nav class="navbar navbar-dark navbar-expand-sm sticky-top">
+       <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon fa fa-bars fa-lg"></span>
+       </button>
+       
+      <!--a class="navbar-brand mr auto" href="#"><strong style="color: #512DA8">theTainmentblog </strong></a-->
+      <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#"><span style="font-size: 15pt;" class=" fa fa-home"></span></a></li>
+          <li class="dropdown nav-item active"><a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#"><span class="fa"></span> Post </a>
+             <ul class="dropdown-menu">
+               <li><a class="nav-link" href="thetainmentblogpost.html" style="color: black;">My Post</a></li>
+               <li><a class="nav-link" href="mywork.html" style="color: black;">My Work</a></li>
+             </ul>
+          </li>
+          <li class="nav-item active"><a class="nav-link" href="thetainmentbloggallary.html"><span class="fa "></span>    Gallery</a></li>
+          <li class="nav-item active"><a class="nav-link" href="thetainmentblogabout.html"><span class="fa fa"></span>About</a></li>
+          <li class="nav-item active"><a class="nav-link" href="thetainmentblogmore.html"><span class="fa fa"></span>More</a></li>
+        </ul>
+      </div>
+      <span class="navbar-text" id="login">
+          <button class="btn btn-primary"><a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal"> Subscribe</a></button>
+      </span>
+    </nav>
+    <!--end nav-->
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="image/road-3856796_1920.jpg" alt="Nature image" style="width:100%; height: 500px;">
+        <div class="carousel-caption">
+          <h3 style="font-family:monospace; color:#aef;">The purpose of life is It's  usefulness with happiness, Not only happiness.</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="image/logo_thetainment.jpg" alt="thetainmentblog logo" style="width:100%; height: 500px;">
+        <div class="carousel-caption">
+          <!--h3></h3-->
+        </div>
+      </div>
+    
+      <div class="item">
+        <img class="d-block img-fluid" src="image/pexels-photo-132989.jpeg" alt="coloureful image background" style="width:100%; height: 500px;">
+      </div>
+       
+      <div class="item">
+        <img class="d-block img-fluid" src="image/boulders-calm-conifers-426894.jpg" alt="Shinig Nature" style="width:100%; height: 500px;">
+      </div>
+
+      <div class="item">
+        <img class="d-block img-fluid"
+            src="image/pexels-photo.jpg" alt="laptop" style="width:100%; height: 500px;">
+      </div>
+
+      <div class="item">
+         <img class="d-block img-fluid"
+         src="image/imac-apple-mockup-app-38544.jpeg" alt="apple macbook keyboard" style="width:100%; height: 500px;">  
+      </div>
+
+      <div class="item">
+        <img src="image/working-at-night_4460x4460.jpg" alt="image" style="width:100%; height: 500px">
+        <div class="carousel-caption">
+        </div>
+      </div>
+  
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<div style="background-color: #11f; z-index: -100; padding: 25px 0px 25px 0px;">
+  <div class="container" style="background-color: rgba(14,14,14,1); z-index: 100; padding: 20px 20px 20px 20px; box-shadow: 4px 4px 4px 4px rgba(0.4,0.4,0.4,0.4);">
+    <div class="row" style="padding: 20px 20px 20px 20px;">
+      <div class="col col-12 col-sm-4 offset align-self-center" >
+      <div>
+        <img class="img-fluid" src="image/photo-1547280746-0e984cc4ca31.jpg" width="280px" height="300px" alt="technology image">
+
+      </div>  
+        <br> 
+      <div>
+        <a href="cellular.html"><img class="img-fluid" src="image/raisting-sattelit-reception-signal.jpg" width="280px" height="160px" alt="sattelite"><p><h5>What Cellular Mobile Communication Is?</h5></p></a>
+      </div>  
+        <br>
+      <div>
+        <a href="windowbuild.html"><img src="image/Windows-10-personalization.jpg" width="280px" height="160px" alt="window personalize"><h5>All About Window 10 build 18334</h5></a>
+      </div>
+    </div>
+    <div class="col offset-1 col-sm align-self-center">
+      <div style="top: 0; padding:0px 0px 25px 0px;">
+        <iframe class="iframe-responsive video1" src="https://www.youtube.com/embed/d6jdqyYHQkU" width="90%" height="350px"></iframe>
+      <br>
+      </div>
+      <div>
+        <a href="googlestadia.html">
+        <h2>Google Stadia : The Future of Gaming</h2>
+        <img class="img-fluid" src="image/images(3)gs.jpg" width="280px" height="160px" alt="sattelite"><img class="img-fluid" src="image/imagesgs.jpg" width="280px" height="160px" alt="gamming plateform"><h5>All About Google Stadia</h5></a>
+      </div>  
+    </div>
+    </div>
+  </div>
+</div>
+          
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html"><span class="fa fa-home"></span></a></li>
+                        <li><a href="thetainmentbloggallary.html">Gallery</a></li>
+                        <li><a href="thetainmentblogpost.html">Post</a></li>
+                        <li><a href="thetainmentblogabout.html">About</a></li>
+                        <li><a href="thetainmentblogmore.html">More</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                  <h4>Contact Us</h4>
+                    <address>
+                  <i class="fa fa-envelope fa-lg"></i> <a href="mailto:thetainmentblog@gmail.com">thetainmentblog@gmail.com</a>
+               </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href=""><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/thetainmentblog/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href=""><i class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/vimlesh_7" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="https://www.youtube.com/channel/UClEWT1CqNypWLKcYZeIrzmg/featured?disable_polymer=1" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+           </div> 
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>&copy; Copyright 2019
+                    <br>  
+                    <a href="index.html"> theTainmentblog</a> | 
+                    <a href="privacypolicy.html" target="_blank">Privacy Policy</a></p>
+                </div>
+           </div>
+        </div>
+    </footer>
+     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+
+    <!--firebase-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDCdY5a7AY54Fn16OVyH27duv7ACYAiLDM",
+    authDomain: "thetainmentblog-9842c.firebaseapp.com",
+    databaseURL: "https://thetainmentblog-9842c.firebaseio.com",
+    projectId: "thetainmentblog-9842c",
+    storageBucket: "thetainmentblog-9842c.appspot.com",
+    messagingSenderId: "1035298526496",
+    appId: "1:1035298526496:web:89ae95aac34b2cdee4b345",
+    measurementId: "G-RCZ6RWCY0B"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script type="text/javascript">
+//saving to the database
+//var firestore = firebase.firestore();
+//const r = firestore.doc('Subscriber/LYzkdPzXo7Je7S18q1Gz');
+  // Get a reference to the database service
+  function writeUserData(){
+  var database = firebase.database();
+  console.log("Firebase runnning");
+  //alert("1");
+  var username=document.getElementById('name').value();
+  var mobile=document.getElementById('phone').value();
+  var emaill=document.getElementById('email').value();
+  alert('check' + username + " " + mobile + " " + emaill);
+  database.ref('Subscriber/').set({
+    name: username,
+    email: emaill,
+    phone:mobile
+  });
+  alert('thankyou!' + username );
+ }
+</script>
+    <!--firebase>
+ </body>
+</html>

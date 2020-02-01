@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	  <meta charset="utf-8">
+    <meta name="description" content="Solve x3 − x + 2 = 0. by Muller’s Method. Start with initial guesses 0.5 + 1i, 0.6 + 0.9i, 0.7 + 0.8i.">
+    <meta name="keywords" content="Muller’s Method,Matlab Code,Solve equation,Find Roots od equation">
+    <meta name="author" content="Vimlesh Kumar">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
+	  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+      <link rel="stylesheet" href="thetainmentblogstyle.css" type="text/css">
+      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      
+      <title>Muller's Method</title>
+      <link rel="icon" type="image/logo_thetainment.jpg" href="image/logo_thetainment.jpg"/>	
+
+<!--Adsence-->
+ 
+<!--Adsence-->
+
+      <script type="text/javascript" src="thetainmentblog.js"></script>
+      
+<!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127455821-1"></script>
+     <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'UA-127455821-1');
+     </script>
+     <style>
+     body
+     {
+      width: 100%;
+     }
+     .par
+         {
+          padding: 20px 0px 50px 0px;
+          font-style:inherit;
+          font-size:20px;
+         }
+     </style>
+</head>
+<body>
+
+    <nav class=" navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+             <span class="navbar-toggler-icon"></span> 
+        </button>
+        <a class="navbar-brand mr-auto" href="index.html"><h1>theTainmentblog</h1></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html"><span class="fa fa-home"></span></a></li>
+              <li class="dropdown nav-item active"><a class="dropdown-toggle nav-link" data-toggle="dropdown" href="thetainmentblogpost"><span class="fa"></span> Post </a>
+               <ul class="dropdown-menu">
+                 <li><a class="nav-link" href="thetainmentblogpost.html"><h5 style="color: #abc;">My Post</h5></a></li>
+                 <li><a class="nav-link" href="mywork.html"><h5 style="color: #abc;">My Work</h5></a></li>
+               </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="thetainmentbloggallary.html"> Gallery </a></li>
+              <li class="nav-item"><a class="nav-link" href="thetainmentblogabout.html"> About </a></li>
+              <li class="nav-item"><a class="nav-link" href="thetainmentblogmore.html"> More</a></li>
+            </ul> 
+        </div>
+      </div>
+    </nav>
+
+ 	<div class="container col-12 col-sm-10" style="padding: 0px 10px 0px 10px;">
+    <div class="par">
+        <h4>Solve x3 − x + 2 = 0. by Muller’s Method. Start with initial guesses 0.5 + 1i, 0.6 + 0.9i, 0.7 + 0.8i.</h4>
+        <br>
+        <div style="border: 1px solid black;" class="col-12 col-sm-8">
+          <h6 class="col-12">Matlab Code :</h6>
+          <br>
+          <pre style="color: blue;">
+x0=0.5+1i;
+x1=0.6+0.9i;
+x2=0.7+0.8i;
+f=@(x)(x^3-x+2);
+error=1;
+det=0;
+ans=[];
+i=1;
+while error>0.000001
+    h0=x1-x0;
+    h1=x2-x1;
+    del0=(f(x1)-f(x0))/(x1-x0);
+    del1=(f(x2)-f(x1))/(x2-x1);
+    a=(del1-del0)/(h0+h1);
+    b=del1+a*h1;
+    c=f(x2);
+    if(abs(b+sqrt(b*b+4*a*c))>abs(b-sqrt(b*b-4*a*c)))
+        det=(-2*c)/(b+sqrt(b*b-4*a*c));
+    elseif(abs(b+sqrt(b*b+4*a*c))<=abs(b-sqrt(b*b-4*a*c)))
+        det=(-2*c)/(b-sqrt(b*b-4*a*c));
+    end
+    x3=x2+det;
+    error=abs((x3-x2)/x2)*100;
+    ans(i,:)=[i x3 error];
+    x0=x1;
+    x1=x2;
+    x2=x3;
+    i=i+1;
+end
+fprintf('     iterations           x3_value           error\n');
+disp(ans);
+fprintf('root of equation is: %g');
+x3
+          </pre>
+        </div>
+        <div class="col-12 col-sm-8 " style="border: 1px solid black;margin-top: 10px;">
+          Output:<br>
+          <img src="image/newtonraphson_2.jpg" alt="binary to decimal input and output" class="img-fluid">
+        </div>
+    </div>
+  </div>
+ 
+<footer class="footer" style="bottom: 0;">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html"><span class="fa fa-home"></a></li>
+                        <li><a href="thetainmentbloggallary.html">Gallery</a></li>
+                        <li><a href="thetainmentblogpost.html">Post</a></li>
+                        <li><a href="thetainmentblogabout.html">About</a></li>
+                        <li><a href="thetainmentblogmore.html">More</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                	<h4>Contact Us</h4>
+                    <address>
+		              <i class="fa fa-envelope fa-lg"></i> <a href="mailto:thetainmentblog@gmail.com">thetainmentblog@gmail.com</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href=""><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/thetainmentblog/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href=""><i class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/vimlesh_7" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="https://www.youtube.com/channel/UClEWT1CqNypWLKcYZeIrzmg/featured?disable_polymer=1" target="_blank"><i class="fa fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+           </div> 
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2019
+                    <br>	
+                    <a href="index.html"> theTainmentblog</a> | 
+                    <a href="privacypolicy.html" target="_blank">Privacy Policy</a></p>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ </body>
+</html>
