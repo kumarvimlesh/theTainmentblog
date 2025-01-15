@@ -1,2 +1,2 @@
 # theTainmentblog
-my website
+https://kumarvimlesh.github.io/theTainmentblog/
